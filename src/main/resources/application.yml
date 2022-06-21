@@ -1,0 +1,6 @@
+spring:
+    datasource:
+        password: wora
+        url: jdbc:postgresql://localhost:5432/samgau_db
+        username: postgres
+        driver-class-name: org.postgresql.Driver
