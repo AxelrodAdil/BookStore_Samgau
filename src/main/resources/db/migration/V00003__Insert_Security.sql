@@ -15,3 +15,6 @@ VALUES ('1', 'admin@mail.com', 'admin', 'admin', '$2a$12$AU951iduBdXO/x/njEyfsuV
 
 INSERT INTO roles (role_id, role_email, role_first_name, role_last_name, role_password, role_name, role_status)
 VALUES ('2', 'user@mail.com', 'user', 'user', '$2a$12$dkJVG4i4yoe03fj9AvkweO9.8S3Jo0reJatVSmv96gt2sHNuIFPt6', 'USER', 'BANNED');
+
+INSERT INTO roles (role_id, role_email, role_first_name, role_last_name, role_password, role_name, role_status)
+VALUES ('3', 'user1@mail.com', 'user', 'user', '$2a$12$dkJVG4i4yoe03fj9AvkweO9.8S3Jo0reJatVSmv96gt2sHNuIFPt6', 'USER', 'ACTIVE');

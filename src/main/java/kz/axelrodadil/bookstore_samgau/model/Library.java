@@ -14,8 +14,8 @@ import javax.persistence.*;
 public class Library {
 
     @Id
-    @SequenceGenerator(name = "library_id_seq", sequenceName = "library_id_seq", allocationSize = 1)
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "library_id_seq")
+    @SequenceGenerator(name = "libraries_seq", sequenceName = "libraries_seq", allocationSize = 1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "libraries_seq")
     @Column(name = "library_id")
     private Long libraryId;
 

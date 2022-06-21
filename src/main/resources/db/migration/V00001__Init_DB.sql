@@ -16,6 +16,7 @@ CREATE TABLE books
     author_id BIGINT NOT NULL REFERENCES authors(author_id),
     book_name VARCHAR(150) NOT NULL,
     bookshelf VARCHAR(150) NOT NULL,
+    book_price FLOAT8 NOT NULL,
     book_published_year DATE NOT NULL
 );
 

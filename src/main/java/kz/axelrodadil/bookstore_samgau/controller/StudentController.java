@@ -46,4 +46,13 @@ public class StudentController {
         studentService.deleteStudent(studentId);
         return ResponseEntity.ok(ApiResponse.success(null));
     }
+
+    @GetMapping("{student_id}")
+    @PreAuthorize("hasAuthority('scheduler:write')")
+    public ResponseEntity<ApiResponse<?>> calculatePrice(
+            @PathVariable("student_id") Long studentId
+    ) {
+        Double calculatedPrice = studentService.calculatePrice(studentId);
+        return ResponseEntity.status(200).body(ApiResponse.success(calculatedPrice));
+    }
 }

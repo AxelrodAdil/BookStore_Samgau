@@ -29,6 +29,9 @@ public class Book {
     @Column(name = "bookshelf")
     private String bookshelf;
 
+    @Column(name = "book_price")
+    private Double bookPrice;
+
     @Column(name = "book_published_year")
     private LocalDateTime bookPublishedYear;
 }
