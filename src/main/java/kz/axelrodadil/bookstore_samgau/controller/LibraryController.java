@@ -31,4 +31,14 @@ public class LibraryController {
         var libraryDto = libraryService.getLibraryById(libraryId);
         return ResponseEntity.status(200).body(ApiResponse.success(libraryDto));
     }
+
+    @PostMapping
+    @PreAuthorize("hasAuthority('scheduler:read')")
+    public ResponseEntity<ApiResponse<?>> getLibraryById(
+            @RequestParam("student_id") Long studentId,
+            @RequestParam("book_id") Long bookId
+    ) {
+        libraryService.bindBookToStudent(studentId, bookId);
+        return ResponseEntity.ok(ApiResponse.success(null));
+    }
 }
