@@ -34,4 +34,16 @@ public class Book {
 
     @Column(name = "book_published_year")
     private LocalDateTime bookPublishedYear;
+
+    @Column(name = "book_discount")
+    private Long bookDiscount;
+
+    @Column(name = "book_count")
+    private Long bookCount;
+
+    @Column(name = "book_publisher")
+    private String bookPublisher;
+
+    @Column(name = "book_image")
+    private String bookImage;
 }
